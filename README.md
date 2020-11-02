@@ -1,1 +1,1 @@
-# TimerTyper
+# CheetahTyper
