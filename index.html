@@ -3,10 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./bundle.js"></script>
+    <link rel="stylesheet" href="../stylesheets/reset.css" type="text/css">
+    <link rel="stylesheet" href="../stylesheets/modal.css" type="text/css">
+    <link rel="stylesheet" href="../stylesheets/game.css" type="text/css">
     <title>Cheetah Typer</title>
 </head>
 <body>
-    CHEETAH TYPER
+    <div id="intro-container">
+        <div id="intro-content">
+            <h1>Cheetah Typer</h1>
+            <div id="game-description">
+                <p>Cheetah Typer is a game that allows players to work on their typing speed in a fun way. Each level of this game will have a paragraph for the player to type, and a certain amount of time allotted to finish typing that paragraph. If the player
+                   successfully completes the paragraph prior to time running out, the player will move on to the next level.
+                </p>
+            </div>
+            <div id="level-buttons">
+                <p>Choose Your Difficulty:</p>
+                <button>Easy</button>
+                <button>Medium</button>
+                <button>Hard</button>
+            </div>
+            <div>
+                <button id="start-game">Start Game!</button>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="hidden">
+        <div class="modal-screen"></div>
+        <div class="modal-content"></div>
+    </div>
+    <h1 id="main-title">Cheetah Typer</h1>
+    <main id="main-container">
+        <div id="game-content">
+            <div id="timer">10</div>
+            <div id="words-container">
+                <div id="words-display">WORDS GO HERE</div>
+                <textarea id="words-input" autofocus>WORDS</textarea>
+            </div>
+        </div>
+    </main>
+    <script src="./bundle.js"></script>
 </body>
 </html>
