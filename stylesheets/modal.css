@@ -1,0 +1,29 @@
+.hidden {
+    display: none;
+}
+
+.modal-screen, #intro-container {
+    z-index: 10;
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background: rgba(0, 0, 0, .7);
+}
+
+#intro-content {
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -325px;
+    margin-top: -200px;
+    border: solid orange 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    border-radius: .25rem;
+}
+
