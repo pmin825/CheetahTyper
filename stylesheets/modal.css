@@ -2,7 +2,7 @@
     display: none;
 }
 
-.modal-screen, #intro-container {
+#intro-container {
     z-index: 10;
     position: fixed;
     top: 0%;
@@ -10,20 +10,108 @@
     left: 0%;
     right: 0%;
     background: rgba(0, 0, 0, .7);
+    
 }
 
 #intro-content {
-    width: 600px;
-    height: 400px;
+    width: 610px;
+    height: 450px;
     position: absolute;
     left: 50%;
-    top: 50%; 
+    top: 52%; 
     margin-left: -325px;
-    margin-top: -200px;
-    border: solid orange 1px;
+    margin-top: -210px;
+    /* border: solid orange 1px; */
     padding-left: 20px;
     padding-right: 20px;
     background-color: white;
-    border-radius: .25rem;
+    border-radius: 1rem;
+    /* background-image: url('../assets/cheetah.png');
+    background-repeat: no-repeat;
+    background-size: contain; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.6);
 }
 
+#level-buttons button {
+    display:inline-block;
+    padding: .5rem;
+    border-radius:2em;
+    text-decoration: none;
+    outline: none;
+    /* font-weight:300; */
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.4);
+    text-align:center;
+    transition: all 0.2s;
+    cursor: pointer;
+    background-color: #CDB498;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.modal-content {
+    width: 610px;
+    height: 320px;
+    position: absolute;
+    left: 50%;
+    top: 52%; 
+    margin-left: -325px;
+    margin-top: -210px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    border-radius: 1rem;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.6);
+}
+
+#modal {
+    z-index: 10;
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background: rgba(0, 0, 0, .7);
+    
+}
+
+#modal-wrapper {
+    width: fit-content;
+}
+
+#new-game {
+    display:inline-block;
+    padding: .5rem;
+    border-radius:2em;
+    text-decoration: none;
+    outline: none;
+    /* font-weight:300; */
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.4);
+    text-align:center;
+    transition: all 0.2s;
+    cursor: pointer;
+    background-color: #CDB498;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#start-game {
+    display:inline-block;
+    padding: .5rem;
+    border-radius:2em;
+    text-decoration: none;
+    outline: none;
+    /* font-weight:300; */
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.4);
+    text-align:center;
+    transition: all 0.2s;
+    cursor: pointer;
+    background-color: #CDB498;
+    font-family: 'Permanent Marker', cursive;
+}

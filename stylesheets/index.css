@@ -1,35 +1,120 @@
+body {
+    margin: 0;
+    /* background-image: url('../assets/bgjungle.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+.disabled {
+    pointer-events:none;
+    color:#AAA;
+    background:#F5F5F5;
+}
+
+#game-container {
+    height: 70%;
+    width: 70%;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/gamebg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+
+}
+
 #game-content {
-    width: 600px;
-    height: 400px;
-    position: absolute;
-    left: 50%;
-    top: 50%; 
-    margin-left: -325px;
-    margin-top: -200px;
+    width: 50%;
+    height: 70%;
     border: solid orange 1px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: white;
-    border-radius: .25rem;
+    background-color: black;
+    border-radius: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    color: white;
+    font-weight: bold;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.6);
+}
+
+#game-description p {
+    font-size: 25px;
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#game-description span {
+    font-size: 25px;
+    color: red;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#level-buttons p {
+    font-size: 18px;
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    margin-bottom: 10px;
+}
+
+#main-container {
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90vh;
 }
 
 #main-title {
-    margin-top: 50px;
-    font-size: 50px;
-    color: orange;
+    margin-top: 10px;
+    font-size: 70px;
+    color: #CDB498;
     font-weight: 900;
-    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#social-logos {
+    display: flex;
+    justify-content: center;
+}
+
+#social-logos img {
+    padding: 5px;
+}
+
+.spelled-right {
+    color: green;
+}
+
+.spelled-wrong {
+    color: red;
+    /* text-decoration: underline; */
+}
+
+#stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 25%;
+    font-family: 'Permanent Marker', cursive;
+    margin-bottom: 15px;
 }
 
 #timer {
     font-size: 50px;
-    color: orange;
+    color: #CDB498;
     font-weight: 900;
     text-align: center;
     margin-top: 40px;
+    font-family: 'Permanent Marker', cursive;
 }
 
 #words-container {
@@ -37,23 +122,28 @@
     flex-direction: column;
     height: 80%;
     justify-content: space-evenly;
+
 }
 
 #words-display {
     margin-left: calc(1rem + 2px);
     margin-right: calc(1rem + 2px);
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+
 }
 
 #words-input {
     border: solid 1px black;
     outline: none;
-    height: 100px;
+    height: 60px;
     padding: .5rem 1rem;
-    font-size: 16px;
+    font-size: 30px;
     border-radius: .5rem;
     resize: none;
-    font-family: 'Courier New', Courier, monospace
+    font-family: 'Caveat', cursive;
 }
+
+
+
 
