@@ -56,6 +56,13 @@ body {
     font-family: 'Permanent Marker', cursive;
 }
 
+#game-over {
+    font-size: 25px;
+    color: red;
+    font-family: 'Permanent Marker', cursive;
+    margin-bottom: 20px;
+}
+
 #level-buttons p {
     font-size: 18px;
     color: black;
