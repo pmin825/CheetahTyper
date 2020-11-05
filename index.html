@@ -6,22 +6,29 @@
     <link rel="stylesheet" href="../stylesheets/reset.css" type="text/css">
     <link rel="stylesheet" href="../stylesheets/modal.css" type="text/css">
     <link rel="stylesheet" href="../stylesheets/index.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
     <title>Cheetah Typer</title>
 </head>
+<header>
+    <div id="social-logos">
+        <a href="https://github.com/pmin825"><img src="../assets/ghlogo.png"></a>
+        <a href="https://www.linkedin.com/in/peter-min-02a62a13a/"><img src="../assets/lilogo.png"></a>
+    </div>
+</header>
 <body>
     <div id="intro-container">
         <div id="intro-content">
-            <h1>Cheetah Typer</h1>
             <div id="game-description">
-                <p>Cheetah Typer is a game that allows players to work on their typing speed in a fun way. Each level of this game will have a paragraph for the player to type, and a certain amount of time allotted to finish typing that paragraph. If the player
-                   successfully completes the paragraph prior to time running out, the player will move on to the next level.
+                <p><span>Instructions: </span>Each level of this game will have a sentence for the player to type, and a certain amount of time allotted to finish typing it. If the player
+                   successfully types the sentence prior to time running out, the player will move on to the next level.
                 </p>
             </div>
             <div id="level-buttons">
                 <p>Choose Your Difficulty:</p>
-                <button>Easy</button>
-                <button>Medium</button>
-                <button>Hard</button>
+                <button id="easy">Easy</button>
+                <button id="medium">Medium</button>
+                <button id="hard">Hard</button>
             </div>
             <div>
                 <button id="start-game">Start Game!</button>
@@ -30,17 +37,31 @@
     </div>
     <div id="modal" class="hidden">
         <div class="modal-screen"></div>
-        <div class="modal-content"></div>
-    </div>
-    <div>
-        <h1 id="main-title">Cheetah Typer</h1>
+        <div id="modal-wrapper">
+            <div class="modal-content">
+                <div id="level-buttons">
+                    <p>Choose Your Difficulty:</p>
+                    <button id="easy2">Easy</button>
+                    <button id="medium2">Medium</button>
+                    <button id="hard2">Hard</button>
+                </div>
+                <button id="new-game">Play Again!</button>
+            </div>
+        </div>
     </div>
     <main id="main-container">
-        <div id="game-content">
-            <div id="timer">Time Left: 10s</div>
-            <div id="words-container">
-                <div id="words-display">WORDS GO HERE</div>
-                <textarea id="words-input" placeholder="WORDS GO HERE" autofocus></textarea>
+        <h1 id="main-title">Cheetah Typer</h1>
+        <div id="game-container">
+            <div id="game-content">
+                <div id="words-container">
+                    <div id="words-display"></div>
+                    <textarea id="words-input" placeholder="TYPE HERE" autofocus></textarea>
+                </div>
+                <div id="stats">
+                    <span id="message"></span>
+                    <p>Current Level: <span id="level-display">1</span> </p>
+                    <p>Time Left:<span id="timer"></span></p>
+                </div>
             </div>
         </div>
     </main>
