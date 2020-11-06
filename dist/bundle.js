@@ -14,11 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   startGame.addEventListener("click", function () {
     document.getElementById("intro-container").classList.add("hidden");
     setInterval(counter, 1000);
-    document.getElementById("words-input").focus(); // if (soundOn === false) {
-    //     pauseMusic();
-    // }   else {
-    //     backgroundMusic();
-    // }
+    document.getElementById("words-input").focus();
   });
   newGame.addEventListener("click", function () {
     timer = currentDifficulty;
@@ -92,9 +88,9 @@ hard2.addEventListener("click", function () {
 });
 var sample = ["He found his art never progressed when he literally used his sweat and tears.", "In the end, he realized he could see sound and hear words.", "I am counting my calories, yet I really want dessert.", "In hopes of finding out the truth, he entered the one-room library.", "When nobody is around, the trees gossip about the people who have walked under them.", "You can't compare apples and oranges, but what about bananas and plantains?", "You'll see the rainbow bridge after it rains cats and dogs.", "The tart lemonade quenched her thirst, but not her longing.", "He was so preoccupied with whether or not he could that he failed to stop to consider if he should.", "People generally approve of dogs eating cat food but not cats eating dog food.", "For the 216th time, he said he would quit drinking soda after this last Coke.", "On a scale from one to ten, what's your favorite flavor of random grammar?", "The door swung open to reveal pink giraffes and red elephants.", "Truth in advertising and dinosaurs with skateboards have much in common.", "Swim at your own risk was taken as a challenge for the group of Kansas City college students.", "There were white out conditions in the town; subsequently, the roads were impassable.", "A purple pig and a green donkey flew a kite in the middle of the night and ended up sunburnt.", "She finally understood that grief was her love with no place for it to go", "Writing a list of random sentences is harder than I initially thought it would be.", "The wake behind the boat told of the past while the open sea for told life in the unknown future.", "While on the first date he accidentally hit his head on the beam.", "He knew it was going to be a bad day when he saw mountain lions roaming the streets.", "Every manager should be able to recite at least ten nursery rhymes backward.", "The tattered work gloves speak of the many hours of hard labor he endured throughout his life", "Poison ivy grew through the fence they said was impenetrable.", "She always had an interesting perspective on why the world must be flat.", "Standing on one's head at job interviews forms a lasting impression.", "Random words in front of other random words create a random sentence.", "To the surprise of everyone, the Rapture happened yesterday but it didn't quite go as expected.", "He had a hidden stash underneath the floorboards in the back room of the house.", "If you like tuna and tomato sauce- try combining the two. It’s really not as bad as it sounds.", "He had unknowingly taken up sleepwalking as a nighttime hobby.", "She hadn't had her cup of coffee, and that made things all the worse.", "I don’t respect anybody who can’t tell the difference between Pepsi and Coke.", "While all her friends were positive that Mary had a sixth sense, she knew she actually had a seventh sense", "The green tea and avocado smoothie turned out exactly as would be expected."];
 var difficulty = {
-  easy: 18,
-  medium: 13,
-  hard: 9
+  easy: 20,
+  medium: 15,
+  hard: 10
 };
 var currentDifficulty = difficulty.easy;
 var timer = currentDifficulty;
@@ -185,7 +181,7 @@ sound.addEventListener("click", function () {
   // soundOn === true ? soundOn = false : soundOn = true;
   if (soundOn === true) {
     soundOn = false;
-    pauseMusic();
+    stopMusic();
   } else {
     soundOn = true;
     backgroundMusic();
@@ -230,8 +226,9 @@ function backgroundMusic() {
   gameMusic.loop = true;
 }
 
-function pauseMusic() {
+function stopMusic() {
   gameMusic.pause();
+  gameMusic.currentTime = 0;
 }
 /******/ })()
 ;

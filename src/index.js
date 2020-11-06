@@ -13,11 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("intro-container").classList.add("hidden");
         setInterval(counter, 1000);
         document.getElementById("words-input").focus();
-        // if (soundOn === false) {
-        //     pauseMusic();
-        // }   else {
-        //     backgroundMusic();
-        // }
     });
 
     newGame.addEventListener("click", () => {
@@ -147,9 +142,9 @@ const sample = [
 ];
 
 const difficulty = {
-    easy: 18,
-    medium: 13,
-    hard: 9
+    easy: 20,
+    medium: 15,
+    hard: 10
 };
 
 let currentDifficulty = difficulty.easy
@@ -247,7 +242,7 @@ sound.addEventListener("click", () => {
 
     if (soundOn === true) {
         soundOn = false;
-        pauseMusic();
+        stopMusic();
     }   else {
         soundOn = true;
         backgroundMusic();
@@ -290,8 +285,9 @@ function backgroundMusic() {
     gameMusic.loop = true;
 }
 
-function pauseMusic() {
+function stopMusic() {
     gameMusic.pause();
+    gameMusic.currentTime = 0;
 }
 
 
