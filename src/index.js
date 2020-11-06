@@ -8,11 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
     let medium = document.getElementById("medium");
     let hard = document.getElementById("hard");
 
+
     startGame.addEventListener("click", () => { 
         document.getElementById("intro-container").classList.add("hidden");
         setInterval(counter, 1000);
         document.getElementById("words-input").focus();
-        backgroundMusic();
+        // if (soundOn === false) {
+        //     pauseMusic();
+        // }   else {
+        //     backgroundMusic();
+        // }
     });
 
     newGame.addEventListener("click", () => {
@@ -160,7 +165,8 @@ const timeDisplay = document.querySelector('#timer');
 const levelDisplay = document.querySelector('#level-display');
 const scoreDisplay = document.querySelector('#final-score');
 const messageDisplay = document.querySelector('#message');
-const modal = document.getElementById('modal')
+const modal = document.getElementById('modal');
+const sound = document.getElementById("sound-settings");
 
 wordsInput.addEventListener('input', () => {
     const arrayWords = wordsDisplayElement.querySelectorAll('span')
@@ -230,11 +236,23 @@ function gameStatus() {
 
 wordsInput.addEventListener("keydown", typeSound);
 
-let soundOn = true;
+let soundOn = false;
 
-function toggleSound() {
-    soundOn = true ? soundOn = false : soundOn = true;
-}
+// function toggleSound() {
+//     soundOn === true ? soundOn = false : soundOn = true;
+// }
+
+sound.addEventListener("click", () => {
+    // soundOn === true ? soundOn = false : soundOn = true;
+
+    if (soundOn === true) {
+        soundOn = false;
+        pauseMusic();
+    }   else {
+        soundOn = true;
+        backgroundMusic();
+    }
+});
 
 function typeSound() {
     const keyPress = new Audio("./assets/typeclick.mp3");
@@ -243,21 +261,21 @@ function typeSound() {
     // }   else {
     //     keyPress.muted = false;
     // }
-    if (soundOn = false) keyPress.muted = true;
+    if (soundOn === false) keyPress.muted = true;
     keyPress.volume = .20   
     keyPress.play();
 };
 
 function correctSound() {
     const correctWord = new Audio("./assets/winsound.mp3");
-    if (soundOn = false) correctWord.muted = true;
+    if (soundOn === false) correctWord.muted = true;
     correctWord.volume = .40
     correctWord.play();
 }
 
 function gameOverSound() {
     const gameOver =  new Audio("./assets/gmover.mp3");
-    if (soundOn = false) gameOver.muted = true;
+    if (soundOn === false) gameOver.muted = true;
     gameOver.volume = .20;
     gameOver.play();
 }
@@ -265,13 +283,16 @@ function gameOverSound() {
 const gameMusic = new Audio ("./assets/gamemusic.mp3");
 
 function backgroundMusic() {
-    if (soundOn = false) gameMusic.muted = true;
+    if (soundOn === false) gameMusic.muted = true;
+    if (soundOn === true) gameMusic.muted = false;
     gameMusic.volume = .40;
     gameMusic.play();
     gameMusic.loop = true;
 }
 
-
+function pauseMusic() {
+    gameMusic.pause();
+}
 
 
 
