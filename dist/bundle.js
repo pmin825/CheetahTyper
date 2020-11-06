@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     easy.style.color = "white";
     medium.style.color = "black";
     hard.style.color = "black";
-    timer = 18;
+    timer = 20;
     showChallenge(sample);
     wordsInput.value = '';
     levelDisplay.innerHTML = 1;
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     easy.style.color = "black";
     medium.style.color = "white";
     hard.style.color = "black";
-    timer = 13;
+    timer = 15;
     showChallenge(sample);
     wordsInput.value = '';
     levelDisplay.innerHTML = 1;
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     easy.style.color = "black";
     medium.style.color = "black";
     hard.style.color = "white";
-    timer = 9;
+    timer = 10;
     showChallenge(sample);
     wordsInput.value = '';
     levelDisplay.innerHTML = 1;
