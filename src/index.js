@@ -249,20 +249,20 @@ function typeSound() {
 };
 
 function correctSound() {
-    const correctWord = new Audio("../assets/winsound.mp3");
+    const correctWord = new Audio("./assets/winsound.mp3");
     if (soundOn = false) correctWord.muted = true;
     correctWord.volume = .40
     correctWord.play();
 }
 
 function gameOverSound() {
-    const gameOver =  new Audio("../assets/gmover.mp3");
+    const gameOver =  new Audio("./assets/gmover.mp3");
     if (soundOn = false) gameOver.muted = true;
     gameOver.volume = .20;
     gameOver.play();
 }
 
-const gameMusic = new Audio ("../assets/gamemusic.mp3");
+const gameMusic = new Audio ("./assets/gamemusic.mp3");
 
 function backgroundMusic() {
     if (soundOn = false) gameMusic.muted = true;

@@ -194,20 +194,20 @@ function typeSound() {
 ;
 
 function correctSound() {
-  var correctWord = new Audio("../assets/winsound.mp3");
+  var correctWord = new Audio("./assets/winsound.mp3");
   if (soundOn = false) correctWord.muted = true;
   correctWord.volume = .40;
   correctWord.play();
 }
 
 function gameOverSound() {
-  var gameOver = new Audio("../assets/gmover.mp3");
+  var gameOver = new Audio("./assets/gmover.mp3");
   if (soundOn = false) gameOver.muted = true;
   gameOver.volume = .20;
   gameOver.play();
 }
 
-var gameMusic = new Audio("../assets/gamemusic.mp3");
+var gameMusic = new Audio("./assets/gamemusic.mp3");
 
 function backgroundMusic() {
   if (soundOn = false) gameMusic.muted = true;
