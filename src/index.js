@@ -237,7 +237,7 @@ function toggleSound() {
 }
 
 function typeSound() {
-    const keyPress = new Audio("../assets/typeclick.mp3");
+    const keyPress = new Audio("./assets/typeclick.mp3");
     // if (timer === 0 || soundOn === false) {
     //     keyPress.muted = true;
     // }   else {

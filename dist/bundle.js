@@ -180,7 +180,7 @@ function toggleSound() {
 }
 
 function typeSound() {
-  var keyPress = new Audio("../assets/typeclick.mp3"); // if (timer === 0 || soundOn === false) {
+  var keyPress = new Audio("./assets/typeclick.mp3"); // if (timer === 0 || soundOn === false) {
   //     keyPress.muted = true;
   // }   else {
   //     keyPress.muted = false;
