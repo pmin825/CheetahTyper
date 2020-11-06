@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("intro-container").classList.add("hidden");
     setInterval(counter, 1000);
     document.getElementById("words-input").focus();
+    backgroundMusic();
   });
   newGame.addEventListener("click", function () {
     timer = currentDifficulty;
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     levelDisplay.innerHTML = 1;
     document.getElementById("modal").classList.add("hidden");
     document.getElementById("words-input").focus();
+    backgroundMusic();
   });
   easy.addEventListener("click", function () {
     easy.style.color = "white";
@@ -125,6 +127,7 @@ wordsInput.addEventListener('input', function () {
   });
 
   if (correct) {
+    correctSound();
     timer = currentDifficulty;
     showChallenge(sample);
     wordsInput.value = '';
@@ -160,20 +163,58 @@ function gameStatus() {
     messageDisplay.innerHTML = 'Game Over';
     document.getElementById("modal").classList.remove("hidden");
     level = 1;
+    gameMusic.pause();
+    gameMusic.currentTime = 0;
+    gameOverSound();
+    timer = null;
   } else {
     messageDisplay.innerHTML = '';
   }
 }
 
 wordsInput.addEventListener("keydown", typeSound);
+var soundOn = true;
+
+function toggleSound() {
+  soundOn =  true ? soundOn = false : 0;
+}
 
 function typeSound() {
-  var keyPress = new Audio("../assets/typeclick.mp3");
+  var keyPress = new Audio("../assets/typeclick.mp3"); // if (timer === 0 || soundOn === false) {
+  //     keyPress.muted = true;
+  // }   else {
+  //     keyPress.muted = false;
+  // }
+
+  if (soundOn = false) keyPress.muted = true;
   keyPress.volume = .20;
   keyPress.play();
 }
 
 ;
+
+function correctSound() {
+  var correctWord = new Audio("../assets/winsound.mp3");
+  if (soundOn = false) correctWord.muted = true;
+  correctWord.volume = .40;
+  correctWord.play();
+}
+
+function gameOverSound() {
+  var gameOver = new Audio("../assets/gmover.mp3");
+  if (soundOn = false) gameOver.muted = true;
+  gameOver.volume = .20;
+  gameOver.play();
+}
+
+var gameMusic = new Audio("../assets/gamemusic.mp3");
+
+function backgroundMusic() {
+  if (soundOn = false) gameMusic.muted = true;
+  gameMusic.volume = .40;
+  gameMusic.play();
+  gameMusic.loop = true;
+}
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map
