@@ -186,6 +186,8 @@ sound.addEventListener("click", function () {
     soundOn = true;
     backgroundMusic();
   }
+
+  sound.innerHTML === "SOUND is OFF" ? sound.innerHTML = "SOUND is ON" : sound.innerHTML = "SOUND is OFF";
 });
 
 function typeSound() {

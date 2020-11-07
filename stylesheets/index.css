@@ -29,7 +29,7 @@ body {
 }
 
 #game-content {
-    width: 50%;
+    width: 70%;
     height: 70%;
     border: solid orange 1px;
     padding-left: 20px;
@@ -96,6 +96,13 @@ body {
     padding: 5px;
 }
 
+#sound-settings {
+    border: none;
+    outline: none;
+    font-family: 'Permanent Marker', cursive;
+    cursor: pointer;
+}
+
 .spelled-right {
     color: green;
 }
@@ -111,8 +118,13 @@ body {
     align-items: center;
     justify-content: space-evenly;
     height: 25%;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Indie Flower', cursive;
     margin-bottom: 15px;
+}
+
+#stats p {
+    font-size: 30px;
+    font-weight: bold;
 }
 
 #timer {
@@ -121,7 +133,8 @@ body {
     font-weight: 900;
     text-align: center;
     margin-top: 40px;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Indie Flower', cursive;
+    margin-left: 10px;
 }
 
 #words-container {
@@ -135,8 +148,8 @@ body {
 #words-display {
     margin-left: calc(1rem + 2px);
     margin-right: calc(1rem + 2px);
-    font-size: 30px;
-    font-family: 'Caveat', cursive;
+    font-size: 35px;
+    font-family: 'Indie Flower', cursive;
 
 }
 
@@ -145,10 +158,10 @@ body {
     outline: none;
     height: 60px;
     padding: .5rem 1rem;
-    font-size: 30px;
+    font-size: 35px;
     border-radius: .5rem;
     resize: none;
-    font-family: 'Caveat', cursive;
+    font-family: 'Indie Flower', cursive;
 }
 
 
