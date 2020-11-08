@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     showChallenge(sample);
     wordsInput.value = '';
     level = 1;
-    levelDisplay.innerHTML = 1;
+    levelDisplay.innerHTML = 0;
     document.getElementById("modal").classList.add("hidden");
     document.getElementById("words-input").focus();
     backgroundMusic();
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     timer = 21;
     showChallenge(sample);
     wordsInput.value = '';
-    levelDisplay.innerHTML = 1;
+    levelDisplay.innerHTML = 0;
     document.getElementById("modal").classList.add("hidden");
     document.getElementById("words-input").focus();
   });
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     timer = 16;
     showChallenge(sample);
     wordsInput.value = '';
-    levelDisplay.innerHTML = 1;
+    levelDisplay.innerHTML = 0;
     document.getElementById("modal").classList.add("hidden");
     document.getElementById("words-input").focus();
   });
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     timer = 11;
     showChallenge(sample);
     wordsInput.value = '';
-    levelDisplay.innerHTML = 1;
+    levelDisplay.innerHTML = 0;
     document.getElementById("modal").classList.add("hidden");
     document.getElementById("words-input").focus();
   });
@@ -143,7 +143,11 @@ wordsInput.addEventListener('input', function () {
     if (level === 11) cheetah.style.left = 0;
   }
 
-  levelDisplay.innerHTML = level;
+  if (level === 1) {
+    levelDisplay.innerHTML = 0;
+  } else {
+    levelDisplay.innerHTML = (level - 1) * 10;
+  }
 });
 
 function init() {
@@ -172,9 +176,9 @@ function gameStatus() {
     cheetah.style.left = 0;
 
     if (level === 11) {
-      gameFinished.innerHTML = 'You Win!';
+      gameFinished.innerHTML = 'You Win';
       tryAgain.innerHTML = 'Cheetah made it to the finish line!';
-      messageDisplay.innerHTML = 'You Win!';
+      messageDisplay.innerHTML = 'You Win';
     } else {
       gameFinished.innerHTML = 'Game over';
       tryAgain.innerHTML = "Try again!";
@@ -198,7 +202,13 @@ function gameStatus() {
     document.getElementById("modal").classList.remove("hidden");
     gameMusic.pause();
     gameMusic.currentTime = 0;
-    gameOverSound();
+
+    if (level === 11) {
+      winnerSound();
+    } else {
+      gameOverSound();
+    }
+
     timer = null;
     scoreDisplay.innerHTML = (level - 1) * 10 + " yards!";
     level = 1;
@@ -240,8 +250,15 @@ function correctSound() {
 function gameOverSound() {
   var gameOver = new Audio("./assets/gmover.mp3");
   if (soundOn === false) gameOver.muted = true;
-  gameOver.volume = .20;
+  gameOver.volume = .30;
   gameOver.play();
+}
+
+function winnerSound() {
+  var winner = new Audio("./assets/won.mp3");
+  if (soundOn === false) winner.muted = true;
+  winner.volume = .40;
+  winner.play();
 }
 
 var gameMusic = new Audio("./assets/gamemusic.mp3");

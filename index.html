@@ -19,8 +19,8 @@
         <i class="fas fa-suitcase"></i>
     </div>
 </header>
-<body>
-    <div id="intro-container">
+<body oncopy="return false" oncut="return false" onpaste="return false">
+<div id="intro-container">
         <div id="intro-content">
             <div id="game-description">
                 <p><span>Instructions: </span>Help cheetah get to the finish line by correctly typing each sentence before the timer expires!</p>
@@ -65,12 +65,12 @@
         <div id="game-container">
             <div id="game-content">
                 <div id="words-container">
-                    <div id="words-display"></div>
+                    <div id="words-display" class="no-copy"></div>
                     <textarea id="words-input" placeholder="TYPE HERE" autofocus></textarea>
                 </div>
                 <div id="stats">
                     <span id="message"></span>
-                    <p>Current Level: <span id="level-display">1</span> </p>
+                    <p>Distance Run: <span id="level-display">0</span> yds</p>
                     <p>Time Left:<span id="timer"></span></p>
                 </div>
             </div>
