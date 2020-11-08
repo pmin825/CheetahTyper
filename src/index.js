@@ -124,7 +124,7 @@ const sample = [
     "Swim at your own risk was taken as a challenge for the group of Kansas City college students.",
     "There were white out conditions in the town; subsequently, the roads were impassable.",
     "A purple pig and a green donkey flew a kite in the middle of the night and ended up sunburnt.",
-    "She finally understood that grief was her love with no place for it to go",
+    "She finally understood that grief was her love with no place for it to go.",
     "Writing a list of random sentences is harder than I initially thought it would be.",
     "The wake behind the boat told of the past while the open sea for told life in the unknown future.",
     "While on the first date he accidentally hit his head on the beam.",
@@ -140,8 +140,8 @@ const sample = [
     "If you like tuna and tomato sauce- try combining the two. It's really not as bad as it sounds.",
     "He had unknowingly taken up sleepwalking as a nighttime hobby.",
     "She hadn't had her cup of coffee, and that made things all the worse.",
-    "I don't respect anybody who can’t tell the difference between Pepsi and Coke.",
-    "While all her friends were positive that Mary had a sixth sense, she knew she actually had a seventh sense",
+    "I don't respect anybody who can't tell the difference between Pepsi and Coke.",
+    "While all her friends were positive that Mary had a sixth sense, she knew she actually had a seventh sense.",
     "The green tea and avocado smoothie turned out exactly as would be expected."
 ];
 
