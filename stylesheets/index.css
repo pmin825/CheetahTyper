@@ -40,7 +40,7 @@ html {
     /* background-color: red; */
     bottom: 1px;
     left: 0;
-    content: url("../assets/right_cheetah.png");
+    content: url("assets/right_cheetah.png");
 }
 
 .disabled {
@@ -61,7 +61,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('../assets/gamebg.jpg');
+    background-image: url('assets/gamebg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 1rem;
