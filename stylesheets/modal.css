@@ -15,7 +15,7 @@
 
 #intro-content {
     width: 610px;
-    height: 450px;
+    height: 350px;
     position: absolute;
     left: 50%;
     top: 52%; 
@@ -98,6 +98,41 @@
 }
 
 #modal-wrapper {
+    width: fit-content;
+}
+
+.modal-content2 {
+    width: 610px;
+    height: 320px;
+    position: absolute;
+    left: 50%;
+    top: 52%; 
+    margin-left: -325px;
+    margin-top: -210px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    border-radius: 1rem;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.6);
+}
+
+#modal2 {
+    z-index: 10;
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background: rgba(0, 0, 0, .7);
+    
+}
+
+#modal-wrapper2 {
     width: fit-content;
 }
 

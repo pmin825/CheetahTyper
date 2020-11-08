@@ -8,9 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let medium = document.getElementById("medium");
     let hard = document.getElementById("hard");
 
+    
+    // document.addEventListener("keydown", animate);
 
     startGame.addEventListener("click", () => { 
         document.getElementById("intro-container").classList.add("hidden");
+        backgroundMusic();
         setInterval(counter, 1000);
         document.getElementById("words-input").focus();
     });
@@ -29,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         easy.style.color = "white";
         medium.style.color = "black";
         hard.style.color = "black";
-        timer = 20;
+        timer = 21;
         showChallenge(sample);
         wordsInput.value = '';
         levelDisplay.innerHTML = 1
@@ -41,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         easy.style.color = "black";
         medium.style.color = "white";
         hard.style.color = "black";
-        timer = 15;
+        timer = 16;
         showChallenge(sample);
         wordsInput.value = '';
         levelDisplay.innerHTML = 1
@@ -53,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         easy.style.color = "black";
         medium.style.color = "black";
         hard.style.color = "white";
-        timer = 10;
+        timer = 11;
         showChallenge(sample);
         wordsInput.value = '';
         levelDisplay.innerHTML = 1
@@ -133,21 +136,21 @@ const sample = [
     "Random words in front of other random words create a random sentence.",
     "To the surprise of everyone, the Rapture happened yesterday but it didn't quite go as expected.",
     "He had a hidden stash underneath the floorboards in the back room of the house.",
-    "If you like tuna and tomato sauce- try combining the two. It’s really not as bad as it sounds.",
+    "If you like tuna and tomato sauce- try combining the two. It's really not as bad as it sounds.",
     "He had unknowingly taken up sleepwalking as a nighttime hobby.",
     "She hadn't had her cup of coffee, and that made things all the worse.",
-    "I don’t respect anybody who can’t tell the difference between Pepsi and Coke.",
+    "I don't respect anybody who can’t tell the difference between Pepsi and Coke.",
     "While all her friends were positive that Mary had a sixth sense, she knew she actually had a seventh sense",
     "The green tea and avocado smoothie turned out exactly as would be expected."
 ];
 
 const difficulty = {
-    easy: 20,
-    medium: 15,
-    hard: 10
+    easy: 21,
+    medium: 16,
+    hard: 11
 };
 
-let currentDifficulty = difficulty.easy
+let currentDifficulty = difficulty.medium
 
 let timer = currentDifficulty;
 let level = 1;
@@ -162,6 +165,10 @@ const scoreDisplay = document.querySelector('#final-score');
 const messageDisplay = document.querySelector('#message');
 const modal = document.getElementById('modal');
 const sound = document.getElementById("sound-settings");
+const cheetahDisplay = document.getElementById('cheetah');
+const gameFinished = document.getElementById('game-over');
+const tryAgain = document.getElementById('try-again-msg');
+
 
 wordsInput.addEventListener('input', () => {
     const arrayWords = wordsDisplayElement.querySelectorAll('span')
@@ -175,6 +182,7 @@ wordsInput.addEventListener('input', () => {
             charSpan.classList.remove('spelled-wrong')
             correct = false;
         }   else if (char === charSpan.innerText) {
+                    // animate();
             charSpan.classList.add('spelled-right')
             charSpan.classList.remove('spelled-wrong')
         }   else {
@@ -185,13 +193,15 @@ wordsInput.addEventListener('input', () => {
     })
     if (correct) {
         correctSound();
+        animate();
         timer = currentDifficulty;
         showChallenge(sample);
         wordsInput.value = '';
         level += 1;
+        if (level === 11) cheetah.style.left = 0;
     }
     levelDisplay.innerHTML = level
-    scoreDisplay.innerHTML = (level - 1) * 5
+    scoreDisplay.innerHTML = ((level - 1) * 10) + " YARDS!"
 })
 
 function init () {
@@ -216,8 +226,31 @@ function counter() {
 }
 
 function gameStatus() {
-    if (timer === 0) {
-        messageDisplay.innerHTML = 'Game Over';
+    if (timer === 0 || level === 11) {
+        cheetahLeft = 0;
+        cheetah.style.left = 0;
+        if (level === 11) {
+            gameFinished.innerHTML = 'You Win!'; 
+            tryAgain.innerHTML = 'Cheetah made it to the finish line!'
+            messageDisplay.innerHTML = 'You Win!'; 
+        }   else {
+            gameFinished.innerHTML = 'Game over'; 
+            tryAgain.innerHTML = "Try again!"
+            messageDisplay.innerHTML = 'Game Over';
+        }
+        if (currentDifficulty === difficulty.easy) {
+            easy2.style.color = "white";
+            medium2.style.color = "black";
+            hard2.style.color = "black";
+        }   else if (currentDifficulty === difficulty.medium) {
+            easy2.style.color = "black";
+            medium2.style.color = "white";
+            hard2.style.color = "black";
+        }   else if (currentDifficulty = difficulty.hard) {
+            easy2.style.color = "black";
+            medium2.style.color = "black";
+            hard2.style.color = "white";
+        }
         document.getElementById("modal").classList.remove("hidden");
         level = 1;
         gameMusic.pause();
@@ -231,14 +264,9 @@ function gameStatus() {
 
 wordsInput.addEventListener("keydown", typeSound);
 
-let soundOn = false;
-
-// function toggleSound() {
-//     soundOn === true ? soundOn = false : soundOn = true;
-// }
+let soundOn = true;
 
 sound.addEventListener("click", () => {
-    // soundOn === true ? soundOn = false : soundOn = true;
 
     if (soundOn === true) {
         soundOn = false;
@@ -248,20 +276,16 @@ sound.addEventListener("click", () => {
         backgroundMusic();
     }
 
-    sound.innerHTML === "SOUND is OFF" ? sound.innerHTML = "SOUND is ON" : sound.innerHTML = "SOUND is OFF"
+    sound.innerHTML === "SOUND is ON" ? sound.innerHTML = "SOUND is OFF" : sound.innerHTML = "SOUND is ON"
 });
 
 function typeSound() {
     const keyPress = new Audio("./assets/typeclick.mp3");
-    // if (timer === 0 || soundOn === false) {
-    //     keyPress.muted = true;
-    // }   else {
-    //     keyPress.muted = false;
-    // }
     if (soundOn === false) keyPress.muted = true;
     keyPress.volume = .20   
     keyPress.play();
 };
+
 
 function correctSound() {
     const correctWord = new Audio("./assets/winsound.mp3");
@@ -291,6 +315,18 @@ function stopMusic() {
     gameMusic.pause();
     gameMusic.currentTime = 0;
 }
+
+let cheetahLeft = 0;
+function animate(e) {
+    cheetahLeft += (window.screen.width / 12);
+    cheetah.style.left = cheetahLeft + 'px';
+}
+
+
+
+
+
+
 
 
 

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="stylesheets/reset.css" type="text/css">
     <link rel="stylesheet" href="stylesheets/modal.css" type="text/css">
     <link rel="stylesheet" href="stylesheets/index.css" type="text/css">
+    <script src="https://kit.fontawesome.com/1dae5bf311.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet" type="text/css">
@@ -13,17 +14,17 @@
 </head>
 <header>
     <div id="social-logos">
-        <a href="https://github.com/pmin825"><img src="./assets/ghlogo.png"></a>
-        <a href="https://www.linkedin.com/in/peter-min-02a62a13a/"><img src="./assets/lilogo.png"></a>
+        <a href="https://www.linkedin.com/in/peter-min-02a62a13a/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/pmin825"><i class="fab fa-github"></i></a>
+        <i class="fas fa-suitcase"></i>
     </div>
 </header>
 <body>
     <div id="intro-container">
         <div id="intro-content">
             <div id="game-description">
-                <p><span>Instructions: </span>Each level of this game will have a sentence for the player to type, and a certain amount of time allotted to finish typing it. If the player
-                   successfully types the sentence prior to time running out, the player will move on to the next level.
-                </p>
+                <p><span>Instructions: </span>Help cheetah get to the finish line by correctly typing each sentence before the timer expires!</p>
+                <p id="timer-guide">Easy: 20 sec | Medium: 15 sec | Hard: 10 sec</p>
             </div>
             <div id="level-buttons">
                 <p>Choose Your Difficulty:</p>
@@ -44,7 +45,8 @@
             <div class="modal-content">
                 <div id="level-buttons">
                     <span id="game-over">GAME OVER</span>
-                    <p>FINAL SCORE: <span id="final-score">0</span></p>
+                    <p id="try-again-msg">TRY AGAIN!</p>
+                    <p>FINAL DISTANCE: <span id="final-score">0</span></p>
                     <p>Choose Your Difficulty:</p>
                     <div id="level-buttons2">
                         <button id="easy2">Easy</button>
@@ -59,7 +61,7 @@
   
     <main id="main-container">
         <h1 id="main-title">Cheetah Typer</h1>
-        <button id="sound-settings">SOUND is OFF</button>
+        <button id="sound-settings">SOUND is ON</button>
         <div id="game-container">
             <div id="game-content">
                 <div id="words-container">
@@ -75,5 +77,22 @@
         </div>
     </main>
     <script src="./dist/bundle.js"></script>
+    <div id="cheetah-container">
+        <span id="yardage"><p></p></span>
+        <span id="yardage"><p>0</p></span>
+        <span id="yardage"><p>10</p></span>
+        <span id="yardage"><p>20</p></span>
+        <span id="yardage"><p>30</p></span>
+        <span id="yardage"><p>40</p></span>
+        <span id="yardage"><p>50</p></span>
+        <span id="yardage"><p>60</p></span>
+        <span id="yardage"><p>70</p></span>
+        <span id="yardage"><p>80</p></span>
+        <span id="yardage"><p>90</p></span>
+        <span id="yardage" class="finish-line">
+            <i class="fas fa-flag-checkered"></i>
+        </span>
+        <div id="cheetah"></div>
+    </div>
 </body>
 </html>
