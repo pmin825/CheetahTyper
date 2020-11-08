@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         easy.style.color = "white";
         medium.style.color = "black";
         hard.style.color = "black";
-        timer = 21;
+        timer = 26;
         showChallenge(sample);
         wordsInput.value = '';
         levelDisplay.innerHTML = 0
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         easy.style.color = "black";
         medium.style.color = "white";
         hard.style.color = "black";
-        timer = 16;
+        timer = 21;
         showChallenge(sample);
         wordsInput.value = '';
         levelDisplay.innerHTML = 0
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         easy.style.color = "black";
         medium.style.color = "black";
         hard.style.color = "white";
-        timer = 11;
+        timer = 16;
         showChallenge(sample);
         wordsInput.value = '';
         levelDisplay.innerHTML = 0
@@ -146,9 +146,9 @@ const sample = [
 ];
 
 const difficulty = {
-    easy: 21,
-    medium: 16,
-    hard: 11
+    easy: 26,
+    medium: 21,
+    hard: 16
 };
 
 let currentDifficulty = difficulty.medium
