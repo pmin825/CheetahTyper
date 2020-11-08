@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         timer = currentDifficulty;
         showChallenge(sample);
         wordsInput.value = '';
+        level = 1;
         levelDisplay.innerHTML = 1
         document.getElementById("modal").classList.add("hidden");
         document.getElementById("words-input").focus();
@@ -155,6 +156,7 @@ let currentDifficulty = difficulty.medium
 let timer = currentDifficulty;
 let level = 1;
 
+
 const wordsDisplayElement = document.getElementById('words-display')
 const wordsDisplay = document.querySelector('#words-display');
 const wordsInputElement = document.getElementById('words-input')
@@ -201,7 +203,6 @@ wordsInput.addEventListener('input', () => {
         if (level === 11) cheetah.style.left = 0;
     }
     levelDisplay.innerHTML = level
-    scoreDisplay.innerHTML = ((level - 1) * 10) + " YARDS!"
 })
 
 function init () {
@@ -252,11 +253,12 @@ function gameStatus() {
             hard2.style.color = "white";
         }
         document.getElementById("modal").classList.remove("hidden");
-        level = 1;
         gameMusic.pause();
         gameMusic.currentTime = 0;
         gameOverSound();
-        timer = null; 
+        timer = null;
+        scoreDisplay.innerHTML = ((level - 1) * 10) + " yards!" 
+        level = 1;
     }   else {
         messageDisplay.innerHTML = '';
     }

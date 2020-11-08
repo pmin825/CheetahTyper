@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     timer = currentDifficulty;
     showChallenge(sample);
     wordsInput.value = '';
+    level = 1;
     levelDisplay.innerHTML = 1;
     document.getElementById("modal").classList.add("hidden");
     document.getElementById("words-input").focus();
@@ -143,7 +144,6 @@ wordsInput.addEventListener('input', function () {
   }
 
   levelDisplay.innerHTML = level;
-  scoreDisplay.innerHTML = (level - 1) * 10 + " YARDS!";
 });
 
 function init() {
@@ -196,11 +196,12 @@ function gameStatus() {
     }
 
     document.getElementById("modal").classList.remove("hidden");
-    level = 1;
     gameMusic.pause();
     gameMusic.currentTime = 0;
     gameOverSound();
     timer = null;
+    scoreDisplay.innerHTML = (level - 1) * 10 + " yards!";
+    level = 1;
   } else {
     messageDisplay.innerHTML = '';
   }
