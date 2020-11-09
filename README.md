@@ -60,6 +60,29 @@ There are 10 levels per each game difficulty mode. Every level passed will move 
         levelDisplay.innerHTML = ((level - 1) * 10)
     }
 })
+
+function correctSound() {
+    const correctWord = new Audio("./assets/winsound.mp3");
+    if (soundOn === false) correctWord.muted = true;
+    correctWord.volume = .40
+    correctWord.play();
+}
+
+let cheetahLeft = 0;
+function animate(e) {
+    cheetahLeft += (window.screen.width / 12);
+    cheetah.style.left = cheetahLeft + 'px';
+}
+
+function showChallenge(sample) {
+    const randIndex = Math.floor(Math.random() * sample.length);
+    wordsDisplayElement.innerHTML = '';
+    sample[randIndex].split('').forEach(char => {
+        const charSpan = document.createElement('span')
+        charSpan.innerText = char
+        wordsDisplayElement.appendChild(charSpan)
+    })
+}
 ```
 ## Future Direction 
 
