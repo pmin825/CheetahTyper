@@ -64,4 +64,4 @@ There are 10 levels per each game difficulty mode. Every level passed will move 
 ## Future Direction 
 
 *  Implement a WPM counter that tracks typing speed. 
-*  Implement different game modes (ie. single words, choosing length of sentences, and etc.) 
+*  Implement different game modes (ie. single words or different lengths of time) 
