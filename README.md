@@ -60,3 +60,8 @@ There are 10 levels per each game difficulty mode. Every level passed will move 
         levelDisplay.innerHTML = ((level - 1) * 10)
     }
 })
+```
+## Future Direction 
+
+*  Implement a WPM counter that tracks typing speed. 
+*  Implement different game modes (ie. single words, choosing length of sentenches, etc.) 
