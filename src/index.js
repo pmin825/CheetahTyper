@@ -30,6 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
     easy.addEventListener("click", () => {
+        easy.style.backgroundColor = "green";
+        medium.style.backgroundColor = "#CDB498";
+        hard.style.backgroundColor = "#CDB498";
         easy.style.color = "white";
         medium.style.color = "black";
         hard.style.color = "black";
@@ -42,6 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     medium.addEventListener("click", () => {
+        medium.style.backgroundColor = "orange";
+        easy.style.backgroundColor = "#CDB498";
+        hard.style.backgroundColor = "#CDB498";
         easy.style.color = "black";
         medium.style.color = "white";
         hard.style.color = "black";
@@ -54,6 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     hard.addEventListener("click", () => {
+        hard.style.backgroundColor = "red";
+        easy.style.backgroundColor = "#CDB498";
+        medium.style.backgroundColor = "#CDB498";
         easy.style.color = "black";
         medium.style.color = "black";
         hard.style.color = "white";
@@ -67,21 +76,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 easy.addEventListener("click", () => {
+    easy2.style.backgroundColor = "green";
+    medium2.style.backgroundColor = "#CDB498";
+    hard2.style.backgroundColor = "#CDB498";
     currentDifficulty = difficulty.easy;
 
 });
 
 medium.addEventListener("click", () => {
+    medium2.style.backgroundColor = "orange";
+    easy2.style.backgroundColor = "#CDB498";
+    hard2.style.backgroundColor = "#CDB498";
     currentDifficulty = difficulty.medium;
 
 });
 
 hard.addEventListener("click", () => {
+    hard2.style.backgroundColor = "red";
+    easy2.style.backgroundColor = "#CDB498";
+    medium2.style.backgroundColor = "#CDB498";
     currentDifficulty = difficulty.hard;
 
 });
 
 easy2.addEventListener("click", () => {
+    easy2.style.backgroundColor = "green";
+    medium2.style.backgroundColor = "#CDB498";
+    hard2.style.backgroundColor = "#CDB498";
     easy2.style.color = "white";
     medium2.style.color = "black";
     hard2.style.color = "black";
@@ -90,6 +111,9 @@ easy2.addEventListener("click", () => {
 });
 
 medium2.addEventListener("click", () => {
+    medium2.style.backgroundColor = "orange";
+    easy2.style.backgroundColor = "#CDB498";
+    hard2.style.backgroundColor = "#CDB498";
     easy2.style.color = "black";
     medium2.style.color = "white";
     hard2.style.color = "black";
@@ -98,6 +122,9 @@ medium2.addEventListener("click", () => {
 });
 
 hard2.addEventListener("click", () => {
+    hard2.style.backgroundColor = "red";
+    easy2.style.backgroundColor = "#CDB498";
+    medium2.style.backgroundColor = "#CDB498";
     easy2.style.color = "black";
     medium2.style.color = "black";
     hard2.style.color = "white";

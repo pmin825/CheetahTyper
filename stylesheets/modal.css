@@ -34,6 +34,7 @@
     justify-content: space-evenly;
     align-items: center;
     box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.6);
+    background-color: whitesmoke;
 }
 
 #level-buttons2 {
@@ -43,6 +44,19 @@
  
 #level-buttons2 button {
     padding: .5rem;
+
+} 
+
+#level-buttons2 button:hover {
+    /* background-color: red; */
+        box-shadow: 0 6px #666;
+    transform: translate(4px, 4px); 
+}
+
+#level-buttons2 button:active {
+    background-color: red
+    box-shadow: 0 3px #666;
+    transform: translate(4px, 4px); 
 } 
 
 #level-buttons {
@@ -66,6 +80,23 @@
     font-family: 'Permanent Marker', cursive;
 }
 
+#level-buttons #medium {
+    background-color: orange;
+}
+
+
+#level-buttons button:hover {
+    /* background-color: red; */
+        box-shadow: 0 6px #666;
+    transform: translate(4px, 4px); 
+}
+
+#level-buttons button:active {
+    background-color: red;
+    box-shadow: 0 6px #666;
+    transform: translate(4px, 4px); 
+}
+
 .modal-content {
     width: 610px;
     height: 320px;
@@ -84,6 +115,9 @@
     justify-content: space-evenly;
     align-items: center;
     box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.6);
+    background-color: whitesmoke;
+    background-image: url("../assets/texturebg.jpg")
+
 }
 
 #modal {
@@ -111,7 +145,7 @@
     margin-top: -210px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: white;
+    background-color: whitesmoke;
     border-radius: 1rem;
     background-size: contain;
     display: flex;
@@ -119,6 +153,7 @@
     justify-content: space-evenly;
     align-items: center;
     box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.6);
+
 }
 
 #modal2 {
@@ -151,6 +186,12 @@
     font-family: 'Permanent Marker', cursive;
 }
 
+#new-game:hover { 
+        box-shadow: 0 6px #666;
+    transform: translate(4px, 4px); 
+    background-color: blue;
+}
+
 #start-game {
     display:inline-block;
     padding: .5rem;
@@ -164,4 +205,17 @@
     cursor: pointer;
     background-color: #CDB498;
     font-family: 'Permanent Marker', cursive;
+}
+
+#start-game:active {
+    box-shadow: 0 6px #666;
+    transform: translate(4px, 4px); 
+}
+
+#start-game:hover {
+    top: 10px;
+        box-shadow: 0 6px #666;
+    transform: translate(4px, 4px); 
+    background-color: blue;
+
 }

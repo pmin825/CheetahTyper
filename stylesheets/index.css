@@ -6,6 +6,7 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: black;
+    background-image: url("../assets/bgforgame.jpg")
 }
 
 html {
@@ -28,6 +29,7 @@ html {
     background-color: green;
     /* position: absolute; */
     border: solid 1px white;
+    background-image: url("../assets/grass.jpg");
 }
 
 
@@ -54,7 +56,7 @@ html {
     position: relative;
 }
 
-#game-container {
+/* #game-container {
     height: 70%;
     width: 80%;
     background-color: green;
@@ -66,7 +68,7 @@ html {
     background-size: cover;
     border-radius: 1rem;
 
-}
+} */
 
 #game-content {
     width: 600px;
@@ -133,10 +135,14 @@ html {
     color: #CDB498;
     font-weight: 900;
     font-family: 'Permanent Marker', cursive;
+    text-shadow: 6px 4px lightslategray;
 }
+
+
 
 #medium {
     color: white;
+
 }
 
 
@@ -144,6 +150,12 @@ html {
     display: flex;
     justify-content: flex-end;
     margin-right: 50px;
+}
+
+#social-logos i:hover {
+        top: 10px;
+            box-shadow: 0 6px #666;
+    transform: translate(4px, 4px); 
 }
 
 #social-logos i {
@@ -162,7 +174,18 @@ html {
     outline: none;
     font-family: 'Permanent Marker', cursive;
     cursor: pointer;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.6);
+
+    
 }
+
+#sound-settings:hover {
+    top: 10px;
+            /* box-shadow: 0 6px #666; */
+    transform: translate(4px, 4px); 
+}
+
+
 
 .spelled-right {
     color: green;
@@ -190,12 +213,12 @@ html {
 }
 
 #timer {
-    font-size: 50px;
+    font-size: 40px;
     color: #CDB498;
     font-weight: 900;
     text-align: center;
     margin-top: 40px;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Goldman', cursive;
 
 
     margin-left: 10px;
@@ -237,16 +260,35 @@ html {
 
 }
 
-#yardage i {
+#flag1 {
+    margin-top: -80px;
+    font-size: 100px;
+    color: black;
+    position: absolute;
+    z-index: 1;
+}
+
+#flag {
     margin-top: -80px;
     font-size: 100px;
     color: red;
     position: absolute;
+    z-index: 5;
+    /* background: black; */
 }
 
 #yardage p {
     color: white;
+    /* font-family: Clarendon Bold; */
+    /* z-index: 99; */
+    font-family: 'Goldman', cursive;
+
 }
+
+#level-display {
+    font-family: 'Goldman', cursive;
+}
+
 
 
 
