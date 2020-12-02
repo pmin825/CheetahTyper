@@ -150,12 +150,18 @@ html {
     display: flex;
     justify-content: flex-end;
     margin-right: 50px;
+    z-index: 100;
+}
+
+#social-logos a {
+    z-index: 100;
 }
 
 #social-logos i:hover {
-        top: 10px;
-            box-shadow: 0 6px #666;
+    top: 10px;
+    box-shadow: 0 6px #666;
     transform: translate(4px, 4px); 
+    z-index: 100;
 }
 
 #social-logos i {
