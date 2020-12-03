@@ -33,7 +33,7 @@ Play the live game [here](https://pmin825.github.io/CheetahTyper/)!
 There are 10 levels per each game difficulty mode. Every level passed will move the cheetah 10 yards closer to the finish line!
 
 <p align="center">
-  <img src="https://github.com/pmin825/CheetahTyper/blob/main/assets/gamephoto1.png">
+  <img src="https://github.com/pmin825/CheetahTyper/blob/main/assets/cheetahgamess.png">
 </p>
 
 ## Technical Implementation 
