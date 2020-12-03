@@ -24,9 +24,13 @@ Play the live game [here](https://pmin825.github.io/CheetahTyper/)!
 
 ## Instructions 
 
-<p align="center">
-  <img src="https://github.com/pmin825/CheetahTyper/blob/main/assets/instructions.png">
-</p>
+*  Choose your game difficulty level, and then press start game! 
+
+*  Each level of the game will have a sentence or paragraph for you to type, and a certain alotted time based on the difficulty chosen. 
+
+*  Successfully type out the sentence/paragraph correctly before time runs out, and move Cheetah 10 yards close to the finish line.
+
+*  Get Cheetah to the finish line to win (100 yards)!
 
 ### Gameplay
 
