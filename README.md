@@ -2,7 +2,7 @@
 
 ## Description 
 
-CheetahTyper is a game that allows users to work on their typing speed in a fun way. This game was made primarily with just Vanilla Javascript, and did not use any libraries. 
+CheetahTyper is a game that allows users to work on their typing speed in a fun way. This game was made primarily with just Vanilla Javascript/HTML5/CSS3, and did not use any additional libraries. 
 
 <p align="center">
   <img width="100" height="100" src="https://github.com/pmin825/CheetahTyper/blob/main/assets/cheetah.png">
